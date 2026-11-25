@@ -29,8 +29,8 @@
                   <Insets />
                </HBox.margin>
             </Label>
-            <ListView maxWidth="303.0" prefHeight="146.0" prefWidth="303.0" />
-            <Button mnemonicParsing="false" text="Movies">
+            <ListView fx:id="screeningsListView" maxWidth="303.0" prefHeight="146.0" prefWidth="303.0" />
+            <Button fx:id="moviesButton" mnemonicParsing="false" text="Movies">
                <HBox.margin>
                   <Insets left="30.0" />
                </HBox.margin>
@@ -39,17 +39,17 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="24.0" prefWidth="600.0" spacing="40.0">
          <children>
-            <Button mnemonicParsing="false" text="Add">
+            <Button fx:id="AddButton" mnemonicParsing="false" text="Add">
                <HBox.margin>
                   <Insets left="25.0" top="10.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="Delete">
+            <Button fx:id="deleteButton" mnemonicParsing="false" text="Delete">
                <HBox.margin>
                   <Insets top="10.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="edit">
+            <Button fx:id="editButton" mnemonicParsing="false" text="edit">
                <HBox.margin>
                   <Insets top="10.0" />
                </HBox.margin>
@@ -62,7 +62,7 @@
             <Insets />
          </VBox.margin>
       </HBox>
-      <Button maxHeight="77.0" maxWidth="74.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="74.0" text="Back">
+      <Button fx:id="backButton" maxHeight="77.0" maxWidth="74.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="74.0" text="Back">
          <VBox.margin>
             <Insets top="90.0" />
          </VBox.margin>

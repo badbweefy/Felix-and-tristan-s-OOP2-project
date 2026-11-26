@@ -1,16 +1,17 @@
 package com.example.oop2project.model;
 
-public class Client {
+public class Client extends User {
     private String aName;
     private String aEmailAddress;
     private int aClientId;
     private String aPassword;
 
+
     public Client(String pName, int pClientId, String pPassword, String pEmailAddress) {
         setName(pName);
         setClientId(pClientId);
         setPassword(pPassword);
-        setEmailAddress(pEmailAddress);
+        setUsername(pEmailAddress);
     }
 
     public void setName(String pName) {
@@ -22,21 +23,21 @@ public class Client {
 
     public void setClientId(int pClientId) {
         if (pClientId < 0) {
-            throw new IllegalArgumentException("client id cannot be negative!");
+            throw new IllegalArgumentException("Client ID cannot be negative!");
         }
         this.aClientId = pClientId;
     }
 
-    public void setPassword(String pPassword) {
+    protected void setPassword(String pPassword) {
         if (pPassword == null) {
-            throw new IllegalArgumentException("password cannot be empty");
+            throw new IllegalArgumentException("Password cannot be empty.");
         }
         this.aPassword = pPassword;
     }
 
-    public void setEmailAddress(String pEmailAddress) {
+    protected void setUsername(String pEmailAddress) {
         if (pEmailAddress == null) {
-            throw new IllegalArgumentException("Email Addresss cannot be null");
+            throw new IllegalArgumentException("Email Address cannot be null.");
         }
         this.aEmailAddress = pEmailAddress;
     }
@@ -51,5 +52,5 @@ public class Client {
 
     public String getPassword() { return this.aPassword;}
     
-    public String getEmailAddress() { return this.aEmailAddress;}
+    public String getUsername() { return this.aEmailAddress;}
 }

@@ -5,15 +5,14 @@ package com.example.oop2project.model;
  */
 public class Client extends User{
     private String aName;
-
     private int aClientId;
 
     /**
      * constructor for the Client
-     * @param pName used to set the name of the instance via setname method
-     * @param pClientId used to set the client id through the setclientid method
-     * @param pPassword used to set the password through the setpassword method
-     * @param pEmailAddress used to set the emailaddress through the setEmailaddress method
+     * @param pName used to set the name of the instance via setName method
+     * @param pClientId used to set the client id through the setClientID method
+     * @param pPassword used to set the password through super()
+     * @param pEmailAddress used to set the email address through super()
      */    
     public Client(String pName, int pClientId, String pEmailAddress, String pPassword) {
         super(pEmailAddress, pPassword);
@@ -23,7 +22,7 @@ public class Client extends User{
     
     /**
      *
-     * @param pName checks if null, if not string used to set the name of the instance
+     * @param pName checks if null or blank, if not string used to set the name of the instance
      */
     public void setName(String pName) {
         if (pName == null || pName.isBlank()) {
@@ -34,7 +33,7 @@ public class Client extends User{
 
     /**
      *
-     * @param pClientId checks if its higher than 0 (could add method later to check if it exists) else sets the client id
+     * @param pClientId checks if it's higher than 0 (could add method later to check if it exists) else sets the client id
      */
     public void setClientId(int pClientId) {
         if (pClientId < 0) {
